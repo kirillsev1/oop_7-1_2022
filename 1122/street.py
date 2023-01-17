@@ -84,7 +84,7 @@ def street(new_house: House, file_name: str, action: str = '1'):
         houses = new_houses if new_houses else []
 
     with open(file_name, 'w') as map_list:
-        class_obj = {str(ind): str((ind.x_pos, ind.y_pos, ind.square, ind.height, ind.writer_name)) for ind in houses}
+        class_obj = {str(ind): str((ind.x_pos, ind.y_pos, ind.square, ind.height, ind.name)) for ind in houses}
         map_list.write(json.dumps(class_obj))
 
 
